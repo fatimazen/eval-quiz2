@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.logo {
+    color: blue;
+
+}
+
+.container-titre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('image/ImageFond.png') center;
+    opacity: 0.9;
+    padding: 95px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+
+h1 {
+
+    font-size: 50px;
+    text-shadow: 4px 4px 2px rgba(15, 1, 3, 0.418);
+}
+
+.img {
+    width: 60px;
+    height: 50px;
+
+
+    
+
+}
+
+
+
+hr {
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid blue;
+}
+#instruction{
+    padding: 10PX;
+    text-align: center;
+    color: red;
+    font-size: 20PX;
+}
+.asw{
+    
+    color: blue;
+}
+.restant{
+    float: left;
+
+}
+#btnsoumettre{
+    display: flex;
+    justify-content: center;
+    background-color:blue;
+    color: white;
+    width: 80px;
+
+    border-radius: 10px;
+}
+.soumettre{
+    display: flex;
+    justify-content: center;
+}
+
+.input-style{
+
+    padding-left: 10%;
+width: 1%;
+
+}
+.label-style{
+
+display: flex;
+  
+    
+
+}
+
+
+
+.choix{
+    display: none;
+}
+.result-screen{
+
+}
