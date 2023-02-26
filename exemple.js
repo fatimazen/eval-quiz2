@@ -63,55 +63,52 @@ getJson().then((data) => {
 
 
     }
-    //condition de victoire
-    const conditionDeVictoire = choix[
-        [0, 1, 2, 3]
-    ]
-    console.table([0, 1, 2, 3])
-    // messages
-
-    const gagne = () => `le joueur ${choix[i]} a gagner `
-    const perdu = () => `le joueur a perdu`
-    console.log(perdu());
+    var input = document.querySelectorAll('.input-radio')
+    input.forEach(input => {
+        input.addEventListener('click', (verifGagne))
+        // console.log(input);
 
 
-
-     ) {
+        function verifGagne() {
+            // on recuper l index de la case cliquée
+            const indexInput = parseInt(this.dataset.index)
+            if (choixSelection[indexInput] == reponse || choixSelection[indexInput] === jeuActif) {
         
-     }
+               
+                console.log('bonne reponse');
 
-    // document.querySelectorAll('#input-radio').forEach(input => input.addEventListener("click", gestionClicInput))
+            } else {
 
+                console.log('mauvaise reponse');
 
-    function gestionClicInput() {
-const indexInput= parseInt(this.choix)
-console.log(indexInput);
-    }
+                
+            }  
+                 if (choixSelection[indexInput]==reponse||choixSelection[indexInput]== question){
+            console.log('continue')
+           }
 
-
-    souris.addEventListener("mouseover", function handleMouseOver() {
-        souris.style.color = "green";
-        souris.style.color = "red";
-
-        console.log("btn", souris);
-
+           
+            }
 
 
         
+      
+            
+
+    })
+    var button = document.getElementById('suivant');
+    button.addEventListener('click', () => suivant());
+    function suivant() {
+        console.log(button);
+
+        const melange = data.sort((a, b) => 0.5 - Math.random());
 
 
-    });
-
-});
-
-var input = document.querySelectorAll('.input-radio')
-input.forEach(input => {
-    input.addEventListener('click', (gestionClicInput))
-
-    
-    function gestionClicInput() {
-        console.log(this);
     }
-});
 
-   
+
+
+}
+
+
+});

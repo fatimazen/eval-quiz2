@@ -85,19 +85,40 @@ hr {
 width: 1%;
 
 }
-.label-style{
+.label-style {
 
 display: flex;
   
-    
-
 }
-
-
 
 .choix{
     display: none;
 }
-.result-screen{
 
+button{
+    background-color: blue;
+    color:#fff;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    padding: 5px;
+    width: 20%;
+    cursor:pointer;
+    font-size: 25px;
+}
+button:hover{
+    background-color: rgb(75, 2, 2);
+}
+#score{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    grid-row: 4/5;
+    font-size: 8vh;
+}
+#juste{
+    color:green;
+}
+#faux{
+    color: red;
 }
