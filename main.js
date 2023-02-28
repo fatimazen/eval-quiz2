@@ -83,70 +83,65 @@ getJson().then((data) => {
         input.forEach(input => {
             input.addEventListener('click', (verfiGagne))
             //  
-            // console.log(input);
+            var juste =document.getElementById('juste');
+            var faux = document.getElementById('faux');
+            var score = document.getElementById('score');
+            var scoreJoueur = document.getElementById('scoreplayer');
+            // var nbrJuste=0
+            // var nbrFaux=0
 
             function verfiGagne() {
                 const indexInput = parseInt(this.dataset.index)
                 
+                score =0
                 
                 if (choixselection[indexInput] !== reponse && !jeuActif) {
                     
-                    choixselection[indexInput] = jeuActif
-                    
+                    choixselection[indexInput] == jeuActif
+                
+                 
                 }
 
                 if (choixselection[indexInput] == reponse || choixselection[indexInput] === jeuActif) {
 
 
                     console.log('bonne reponse');
-                    nbrJuste += 1;
-                    juste.textContent =nbrJuste;
-
+                    score++;
+                    // nbrJuste += 1;
+                    // juste.textContent =nbrJuste;
                     
-                } else {
+                    
+                } else  {
                     
                     console.log('mauvaise reponse');
-                    nbrFaux += 1;
-                    faux.textContent = nbrFaux;
-            
+                    
+                    // nbrFaux += 1;
+                    // faux.textContent = nbrFaux;
+                     
                 }
+                
+                 choixselection.textContent = score;
+                console.log(score);
 
-               
+                if(choixselection == 2 || score == 2){
+                    command.classListe.add('hidden');
+
+                }
+                //  var messageElt= document.createElement(h3);
+
                 
             }
 
         })
-        
-
-        
         //
-        var juste =document.getElementById('juste');
-        var faux = document.getElementById('faux');
-        var nbrJuste=0
-        var nbrFaux=0
-        
+     
         var valider= document.getElementById('suivant');
-        valider.addEventListener('click',(questionSuivante));
-         console.log(valider);
-
+        // valider.addEventListener('click',()=>suivant());
+    
+        
         var quest= document.querySelector('.asw');
         
-        function questionSuivante(){
-            const indexQuestion = parseInt(this.dataset.question)
-            console.log(indexQuestion);
-
-            if (quest[indexQuestion]< question.length +1) {
-                    
-                quest[indexQuestion] += 1
-                
-            }
-
-            
-            
-        }
         
-    
-    
     
     const melange = data.sort((a, b) => 0.5 - Math.random());
         
