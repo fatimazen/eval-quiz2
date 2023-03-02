@@ -87,13 +87,13 @@ getJson().then((data) => {
             var faux = document.getElementById('faux');
             var score = document.getElementById('score');
             var scoreJoueur = document.getElementById('scoreplayer');
-            // var nbrJuste=0
-            // var nbrFaux=0
+             var nbrJuste=0
+             var nbrFaux=0
 
             function verfiGagne() {
                 const indexInput = parseInt(this.dataset.index)
                 
-                score =0
+                
                 
                 if (choixselection[indexInput] !== reponse && !jeuActif) {
                     
@@ -106,31 +106,26 @@ getJson().then((data) => {
 
 
                     console.log('bonne reponse');
-                    score++;
-                    // nbrJuste += 1;
-                    // juste.textContent =nbrJuste;
+                    
+                    nbrJuste += 1;
+                    juste.textContent =nbrJuste;
                     
                     
                 } else  {
                     
                     console.log('mauvaise reponse');
                     
-                    // nbrFaux += 1;
-                    // faux.textContent = nbrFaux;
+                    nbrFaux += 1;
+                    faux.textContent = nbrFaux;
                      
                 }
-                
-                 choixselection.textContent = score;
-                console.log(score);
-
-                if(choixselection == 2 || score == 2){
-                    command.classListe.add('hidden');
-
-                }
-                //  var messageElt= document.createElement(h3);
-
+                score =0
                 
             }
+            score.textContent = 'votre score est de ';            
+                    
+
+
 
         })
         //
